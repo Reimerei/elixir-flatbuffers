@@ -43,8 +43,6 @@ int main () {
 
   int message_size;
 
-  int unsiged char ok_message[2] =
-
   // options for the parser
   flatbuffers::GeneratorOptions opts = flatbuffers::GeneratorOptions();
   opts.strict_json = true;
