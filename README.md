@@ -1,4 +1,4 @@
-FlatbuffersPort
+Elixir Flatbuffers
 ==============
 
 A lightweight wrapper around a c++ parser for flatbuffers using ports.

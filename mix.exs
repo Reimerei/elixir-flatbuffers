@@ -1,8 +1,8 @@
-defmodule FlatbuffersPort.Mixfile do
+defmodule FlatbufferPort.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :flatbuffers_port,
+    [app: :flatbuffer_port,
      version: "0.0.1",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,

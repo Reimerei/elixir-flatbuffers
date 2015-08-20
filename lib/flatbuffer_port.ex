@@ -1,7 +1,7 @@
-defmodule FlatbuffersPort do
+defmodule FlatbufferPort do
 
   def open_port() do
-    path = Path.join(:code.priv_dir(:flatbuffers_port), "fb_port")
+    path = Path.join(:code.priv_dir(:flatbuffer_port), "fb_port")
     Port.open({:spawn_executable, path},  [:binary, {:packet, 4}, {:parallelism, true}])
   end
 
