@@ -1,4 +1,6 @@
 FlatbuffersPort
 ==============
 
-A very lightweight wrapper around the c++ implementation of flatbuffers using ports.
+A lightweight wrapper around a c++ parser for flatbuffers using ports.
+
+See the tests for usage examples.

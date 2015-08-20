@@ -1,0 +1,2138 @@
+{
+  quests: [
+    {
+      questName: "tutorial_01",
+      questData: {
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_01",
+        hint: "quests.task.hint.tutorial_01",
+        action: "ShopOpen",
+        type: "BuildingShop",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_02",
+      questData: {
+        priority: 1,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_01"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_05",
+        hint: "quests.task.hint.tutorial_05",
+        action: "BuildingHave",
+        type: "townhall",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_03",
+      questData: {
+        priority: 2,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_02"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_03",
+        hint: "quests.task.hint.tutorial_03",
+        action: "Select",
+        type: "townhall",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_04",
+      questData: {
+        priority: 3,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_03"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_04",
+        hint: "quests.task.hint.tutorial_04",
+        action: "Select",
+        type: "none",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_05",
+      questData: {
+        priority: 4,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_04"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_02",
+        hint: "quests.task.hint.tutorial_02",
+        action: "BuildingHave",
+        type: "house",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_06",
+      questData: {
+        priority: 5,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_05"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_06",
+        hint: "quests.task.hint.tutorial_06",
+        action: "BuildingHave",
+        type: "shipyard",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_07",
+      questData: {
+        priority: 6,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_06"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_07",
+        hint: "quests.task.hint.tutorial_07",
+        action: "Select",
+        type: "shipyard",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_08",
+      questData: {
+        priority: 7,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_07"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_08",
+        hint: "quests.task.hint.tutorial_08",
+        action: "ShopOpen",
+        type: "ShipShop",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_09",
+      questData: {
+        priority: 8,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_08"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_09",
+        hint: "quests.task.hint.tutorial_09",
+        action: "ShipHave",
+        type: "sloop",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_10",
+      questData: {
+        priority: 9,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_09"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+
+        ],
+        desc: "quests.task.description.tutorial_10",
+        hint: "quests.task.hint.tutorial_10",
+        action: "GameViewShow",
+        type: "Island",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_11",
+      questData: {
+        priority: 10,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_10"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.tutorial_11",
+        hint: "quests.task.hint.tutorial_11",
+        action: "SectorUnlockFinish",
+        type: "",
+        info: "0,0",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "tutorial_12",
+      questData: {
+        priority: 11,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_11"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.tutorial_12",
+        hint: "quests.task.hint.tutorial_12",
+        action: "HUDElementShow",
+        type: "QuestCanvas",
+        info: "",
+        amount: 1,
+        tutorial: 1
+      }
+    },
+    {
+      questName: "conquerLumberIsland",
+      questData: {
+        priority: 12,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "tutorial_11"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.conquerLumberIsland",
+        hint: "quests.task.hint.conquerLumberIsland",
+        action: "IslandHave",
+        type: "lumber",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownSawmill",
+      questData: {
+        priority: 13,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "conquerLumberIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "plank",
+            amount: 30
+          }
+        ],
+        desc: "quests.task.description.ownSawmill",
+        hint: "quests.task.hint.ownSawmill",
+        action: "BuildingHave",
+        type: "sawmill",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownStorage",
+      questData: {
+        priority: 14,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownSawmill"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "plank",
+            amount: 30
+          }
+        ],
+        desc: "quests.task.description.ownStorage",
+        hint: "quests.task.hint.ownStorage",
+        action: "BuildingHave",
+        type: "storage",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownHouse",
+      questData: {
+        priority: 15,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownStorage"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "coins",
+            amount: 100
+          }
+        ],
+        desc: "quests.task.description.ownHouse",
+        hint: "quests.task.hint.ownHouse",
+        action: "BuildingHave",
+        type: "house",
+        info: "",
+        amount: 2
+      }
+    },
+    {
+      questName: "researchWarfare",
+      questData: {
+        priority: 16,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "lootPlank"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.researchWarfare",
+        hint: "quests.task.hint.researchWarfare",
+        action: "TechnologyHave",
+        type: "Warfare",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownBarracks",
+      questData: {
+        priority: 17,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownWeaponsmith"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "plank",
+            amount: 10
+          },
+          {
+            type: "pike",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.ownBarracks",
+        hint: "quests.task.hint.ownBarracks",
+        action: "BuildingHave",
+        type: "barracks",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "craftPikeman",
+      questData: {
+        priority: 18,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownBarracks"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "coins",
+            amount: 100
+          }
+        ],
+        desc: "quests.task.description.craftPikeman",
+        hint: "quests.task.hint.craftPikeman",
+        action: "ResourceCraft",
+        type: "pikeman",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownWeaponsmith",
+      questData: {
+        priority: 19,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownStorage"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 2
+          },
+          {
+            type: "plank",
+            amount: 30
+          }
+        ],
+        desc: "quests.task.description.ownWeaponsmith",
+        hint: "quests.task.hint.ownWeaponsmith",
+        action: "BuildingHave",
+        type: "weaponsmith",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "craftPike",
+      questData: {
+        priority: 20,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownWeaponsmith"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "pike",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.craftPike",
+        hint: "quests.task.hint.craftPike",
+        action: "ResourceCraft",
+        type: "pike",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "researchWater",
+      questData: {
+        priority: 21,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "lootPlank"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.researchWater",
+        hint: "quests.task.hint.researchWater",
+        action: "TechnologyHave",
+        type: "Hydrology",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownWell",
+      questData: {
+        priority: 22,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownPitchKiln"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "pitch",
+            amount: 20
+          },
+          {
+            type: "water",
+            amount: 50
+          }
+        ],
+        desc: "quests.task.description.ownWell",
+        hint: "quests.task.hint.ownWell",
+        action: "BuildingHave",
+        type: "well",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "upgradeLumberIsland",
+      questData: {
+        priority: 23,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownSawmill"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "plank",
+            amount: 50
+          }
+        ],
+        desc: "quests.task.description.upgradeLumberIsland",
+        hint: "quests.task.hint.upgradeLumberIsland",
+        action: "IslandHave",
+        type: "lumber",
+        info: "2",
+        amount: 1
+      }
+    },
+    {
+      questName: "exploreSector_1_0",
+      questData: {
+        priority: 24,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "upgradeLumberIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "coins",
+            amount: 50
+          }
+        ],
+        desc: "quests.task.description.exploreSector_1_0",
+        hint: "",
+        action: "SectorUnlockFinish",
+        type: "",
+        info: "1,0",
+        amount: 1
+      }
+    },
+    {
+      questName: "tradePlanks",
+      questData: {
+        priority: 25,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "exploreSector_1_0"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 200
+          }
+        ],
+        desc: "quests.task.description.tradePlanks",
+        hint: "quests.task.hint.tradePlanks",
+        action: "ResourceTradeBuy",
+        type: "plank",
+        info: "",
+        amount: 10
+      }
+    },
+    {
+      questName: "checkLumberProduction",
+      questData: {
+        priority: 26,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "exploreSector_1_0"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "plank",
+            amount: 50
+          }
+        ],
+        desc: "quests.task.description.checkLumberProduction",
+        hint: "quests.task.hint.checkLumberProduction",
+        action: "HUDElementShow",
+        type: "ResourceInfo",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "haveLumberProduction",
+      questData: {
+        priority: 27,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "checkLumberProduction"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "coins",
+            amount: 100
+          }
+        ],
+        desc: "quests.task.description.haveLumberProduction",
+        hint: "quests.task.hint.haveLumberProduction",
+        action: "ResourceProducePerHour",
+        type: "lumber",
+        info: "",
+        amount: 60
+      }
+    },
+    {
+      questName: "ownPitchKiln",
+      questData: {
+        priority: 28,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownHouse"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 2
+          },
+          {
+            type: "pitch",
+            amount: 100
+          }
+        ],
+        desc: "quests.task.description.ownPitchKiln",
+        hint: "quests.task.hint.ownPitchKiln",
+        action: "BuildingHave",
+        type: "pitch kiln",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownPapermill",
+      questData: {
+        priority: 29,
+        req: {
+          buildings: [
+            {
+              type: "townhall",
+              level: 2
+            }
+          ],
+          quests: [
+            "ownWell"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "paper",
+            amount: 50
+          }
+        ],
+        desc: "quests.task.description.ownPapermill",
+        hint: "quests.task.hint.ownPapermill",
+        action: "BuildingHave",
+        type: "paper mill",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownHousing",
+      questData: {
+        priority: 30,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownWell"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "worker",
+            amount: 5
+          }
+        ],
+        desc: "quests.task.description.ownHousing",
+        hint: "quests.task.hint.ownHousing",
+        action: "CapacityReach",
+        type: "worker",
+        info: "",
+        amount: 50
+      }
+    },
+    {
+      questName: "buildDocks",
+      questData: {
+        priority: 31,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownHousing"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "pitch",
+            amount: 50
+          }
+        ],
+        desc: "quests.task.description.buildDocks",
+        hint: "quests.task.hint.buildDocks",
+        action: "BuildingHave",
+        type: "docks",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "completeTradeDeal",
+      questData: {
+        priority: 32,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "buildDocks"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "plank",
+            amount: 25
+          }
+        ],
+        desc: "quests.task.description.completeTradeDeal",
+        hint: "quests.task.hint.completeTradeDeal",
+        action: "MerchantDealPartial",
+        type: "",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "inkProduction",
+      questData: {
+        priority: 33,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownPitchKiln",
+            "ownPapermill"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 2
+          },
+          {
+            type: "ink",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.inkProduction",
+        hint: "quests.task.hint.inkProduction",
+        action: "ResourceProducePerHour",
+        type: "ink",
+        info: "",
+        amount: 5
+      }
+    },
+    {
+      questName: "ownScriptorium",
+      questData: {
+        priority: 34,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "inkProduction",
+            "ownPapermill"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "manuscript",
+            amount: 1
+          },
+          {
+            type: "map",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.ownScriptorium",
+        hint: "quests.task.hint.ownScriptorium",
+        action: "BuildingHave",
+        type: "scriptorium",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "exploreSector_1_1",
+      questData: {
+        priority: 35,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "haveLumberProduction"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "coins",
+            amount: 300
+          },
+          {
+            type: "water",
+            amount: 20
+          }
+        ],
+        desc: "quests.task.description.exploreSector_1_1",
+        hint: "quests.task.hint.exploreSector_1_1",
+        action: "SectorUnlockFinish",
+        type: "",
+        info: "1,1",
+        amount: 1
+      }
+    },
+    {
+      questName: "startTownhallUpgrade",
+      questData: {
+        priority: 36,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "exploreSector_1_1"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "gem",
+            amount: 5
+          }
+        ],
+        desc: "quests.task.description.startTownhallUpgrade",
+        hint: "quests.task.hint.startTownhallUpgrade",
+        action: "BuildingUpgradeStart",
+        type: "townhall",
+        info: "2",
+        amount: 1
+      }
+    },
+    {
+      questName: "upgradeSloop_3",
+      questData: {
+        priority: 37,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "buildDocks"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "plank",
+            amount: 5
+          },
+          {
+            type: "pitch",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.upgradeSloop_3",
+        hint: "quests.task.hint.upgradeSloop_3",
+        action: "ShipUpgradeStart",
+        type: "sloop",
+        info: "3",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownStoneIsland",
+      questData: {
+        priority: 38,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "upgradeSloop_3"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "pikeman",
+            amount: 6
+          },
+          {
+            type: "stone block",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.ownStoneIsland",
+        hint: "quests.task.hint.ownStoneIsland",
+        action: "IslandHave",
+        type: "stone",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "researchSecurity",
+      questData: {
+        priority: 39,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "lootPlank"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.researchSecurity",
+        hint: "quests.task.hint.researchSecurity",
+        action: "TechnologyHave",
+        type: "Security",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownFortress",
+      questData: {
+        priority: 40,
+        req: {
+          buildings: [
+            {
+              type: "townhall",
+              level: 2
+            }
+          ],
+          quests: [
+            "ownStoneCutter"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "gem",
+            amount: 5
+          }
+        ],
+        desc: "quests.task.description.ownFortress",
+        hint: "quests.task.hint.ownFortress",
+        action: "BuildingHave",
+        type: "fortress",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "buildDefense",
+      questData: {
+        priority: 41,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownFortress"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "pitch",
+            amount: 20
+          },
+          {
+            type: "gem",
+            amount: 5
+          }
+        ],
+        desc: "quests.task.description.buildDefense",
+        hint: "quests.task.hint.buildDefense",
+        action: "DefenceHave",
+        type: "pit trap",
+        info: "1",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownAcademy",
+      questData: {
+        priority: 42,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "startTownhallUpgrade"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.ownAcademy",
+        hint: "quests.task.hint.ownAcademy",
+        action: "BuildingHave",
+        type: "academy",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownVault",
+      questData: {
+        priority: 43,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownFortress"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "gem",
+            amount: 5
+          }
+        ],
+        desc: "quests.task.description.ownVault",
+        hint: "quests.task.hint.ownVault",
+        action: "BuildingHave",
+        type: "vault",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "completeTradeDeal2",
+      questData: {
+        priority: 44,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "completeTradeDeal"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.completeTradeDeal2",
+        hint: "quests.task.hint.completeTradeDeal2",
+        action: "MerchantDealWhole",
+        type: "",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownStoneCutter",
+      questData: {
+        priority: 45,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownStoneIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "coins",
+            amount: 100
+          },
+          {
+            type: "stone block",
+            amount: 20
+          }
+        ],
+        desc: "quests.task.description.ownStoneCutter",
+        hint: "quests.task.hint.ownStoneCutter",
+        action: "BuildingHave",
+        type: "stone cutter",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownArsenal",
+      questData: {
+        priority: 46,
+        req: {
+          buildings: [
+            {
+              type: "townhall",
+              level: 2
+            }
+          ],
+          quests: [
+            "ownFortress",
+            "ownScriptorium"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 250
+          }
+        ],
+        desc: "quests.task.description.ownArsenal",
+        hint: "quests.task.hint.ownArsenal",
+        action: "BuildingHave",
+        type: "arsenal",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "firstPvPWin",
+      questData: {
+        priority: 47,
+        req: {
+          buildings: [
+            {
+              type: "townhall",
+              level: 2
+            }
+          ],
+          quests: [
+            "ownVault",
+            "ownArsenal"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 10
+          },
+          {
+            type: "gem",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.firstPvPWin",
+        hint: "quests.task.hint.firstPvPWin",
+        action: "PvpAttack",
+        type: "",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "firstPvPLoot",
+      questData: {
+        priority: 48,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "firstPvPWin"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 10
+          },
+          {
+            type: "gem",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.firstPvPLoot",
+        hint: "quests.task.hint.firstPvPLoot",
+        action: "PvpLoot",
+        type: "coins",
+        info: "",
+        amount: 1000
+      }
+    },
+    {
+      questName: "ownHousing_2",
+      questData: {
+        priority: 49,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownHousing",
+            "ownArsenal"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "coins",
+            amount: 250
+          },
+          {
+            type: "worker",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.ownHousing_2",
+        hint: "quests.task.hint.ownHousing_2",
+        action: "CapacityReach",
+        type: "worker",
+        info: "",
+        amount: 80
+      }
+    },
+    {
+      questName: "ownWheatIsland",
+      questData: {
+        priority: 50,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownArsenal"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownWheatIsland",
+        hint: "quests.task.hint.ownWheatIsland",
+        action: "IslandHave",
+        type: "wheat",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownBakery",
+      questData: {
+        priority: 51,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownWheatIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 3
+          },
+          {
+            type: "bread",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.ownBakery",
+        hint: "quests.task.hint.ownBakery",
+        action: "BuildingHave",
+        type: "bakery",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownBrewery",
+      questData: {
+        priority: 52,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownBakery"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          },
+          {
+            type: "beer",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.ownBrewery",
+        hint: "quests.task.hint.ownBrewery",
+        action: "BuildingHave",
+        type: "brewery",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "haveWheatProduction",
+      questData: {
+        priority: 53,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownWheatIsland",
+            "ownHousing_2"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 1
+          }
+        ],
+        desc: "quests.task.description.haveWheatProduction",
+        hint: "quests.task.hint.haveWheatProduction",
+        action: "ResourceProducePerHour",
+        type: "wheat",
+        info: "",
+        amount: 30
+      }
+    },
+    {
+      questName: "ownCopperIsland",
+      questData: {
+        priority: 54,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "haveWheatProduction"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownCopperIsland",
+        hint: "quests.task.hint.ownCopperIsland",
+        action: "IslandHave",
+        type: "copper",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownClayIsland",
+      questData: {
+        priority: 55,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownCopperIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownClayIsland",
+        hint: "quests.task.hint.ownClayIsland",
+        action: "IslandHave",
+        type: "clay",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownFlaxIsland",
+      questData: {
+        priority: 56,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownClayIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownFlaxIsland",
+        hint: "quests.task.hint.ownFlaxIsland",
+        action: "IslandHave",
+        type: "flax",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownIronOreIsland",
+      questData: {
+        priority: 57,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownFlaxIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownIronOreIsland",
+        hint: "quests.task.hint.ownIronOreIsland",
+        action: "IslandHave",
+        type: "iron ore",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownFruitIsland",
+      questData: {
+        priority: 58,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownIronOreIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownFruitIsland",
+        hint: "quests.task.hint.ownFruitIsland",
+        action: "IslandHave",
+        type: "fruit",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownLimeIsland",
+      questData: {
+        priority: 59,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownFruitIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownLimeIsland",
+        hint: "quests.task.hint.ownLimeIsland",
+        action: "IslandHave",
+        type: "lime",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownCoalIsland",
+      questData: {
+        priority: 60,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownLimeIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownCoalIsland",
+        hint: "quests.task.hint.ownCoalIsland",
+        action: "IslandHave",
+        type: "coal",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownSaltpeterIsland",
+      questData: {
+        priority: 61,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownCoalIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownSaltpeterIsland",
+        hint: "quests.task.hint.ownSaltpeterIsland",
+        action: "IslandHave",
+        type: "saltpeter",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "ownLeadIsland",
+      questData: {
+        priority: 62,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "ownSaltpeterIsland"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 5
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.ownLeadIsland",
+        hint: "quests.task.hint.ownLeadIsland",
+        action: "IslandHave",
+        type: "lead",
+        info: "",
+        amount: 1
+      }
+    },
+    {
+      questName: "attackPlayers",
+      questData: {
+        priority: 63,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "firstPvPLoot"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 10
+          },
+          {
+            type: "coins",
+            amount: 1000
+          }
+        ],
+        desc: "quests.task.description.attackPlayers",
+        hint: "quests.task.hint.attackPlayers",
+        action: "PvpAttack",
+        type: "",
+        info: "",
+        amount: 5
+      }
+    },
+    {
+      questName: "lootPlank",
+      questData: {
+        priority: 64,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "firstPvPLoot"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 10
+          },
+          {
+            type: "gem",
+            amount: 10
+          }
+        ],
+        desc: "quests.task.description.lootPlank",
+        hint: "quests.task.hint.lootPlank",
+        action: "PvpLoot",
+        type: "plank",
+        info: "",
+        amount: 500
+      }
+    },
+    {
+      questName: "lootMoreCoins",
+      questData: {
+        priority: 65,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "attackPlayers"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 50
+          },
+          {
+            type: "gem",
+            amount: 25
+          }
+        ],
+        desc: "quests.task.description.lootMoreCoins",
+        hint: "quests.task.hint.lootMoreCoins",
+        action: "PvpLoot",
+        type: "coins",
+        info: "",
+        amount: 50000
+      }
+    },
+    {
+      questName: "attackMorePlayers",
+      questData: {
+        priority: 66,
+        req: {
+          buildings: [
+
+          ],
+          quests: [
+            "lootPlank"
+          ],
+          technologies: [
+
+          ]
+        },
+        rewards: [
+          {
+            type: "xp",
+            amount: 50
+          },
+          {
+            type: "gem",
+            amount: 25
+          }
+        ],
+        desc: "quests.task.description.attackMorePlayers",
+        hint: "quests.task.hint.attackMorePlayers",
+        action: "PvpAttack",
+        type: "",
+        info: "",
+        amount: 20
+      }
+    }
+  ]
+}

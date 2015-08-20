@@ -17,12 +17,8 @@ defmodule FlatbuffersPort do
     Port.command(port, << 2, schema :: binary >>)
   end
 
-  # responses
-  # {:ok, data}
-  # {:ok}
-  # {:error, reason}
-  def parse_result(result) do
-    
-  end
+  def parse_reponse("ok"), do: :ok
+  def parse_reponse("error: " <> reason), do: {:error, reason}
+  def parse_reponse(data), do: {:ok, data}
 
 end

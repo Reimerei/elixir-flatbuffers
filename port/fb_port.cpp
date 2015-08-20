@@ -74,9 +74,14 @@ int main () {
       // the data is the binary fb, push it into the parser
       parser.builder_.PushBytes((const uint8_t *) &buf[1], message_size-1);
 
-      std::string json;
-      flatbuffers::GenerateText(parser, parser.builder_.GetBufferPointer(), opts, &json);
-      write_message((unsigned char *) json.c_str(), json.size());
+      // check if file identitifier matches a schema
+      if(!parser.root_struct_def_ || !flatbuffers::BufferHasIdentifier(&buf[1], parser.file_identifier_.c_str())) {
+        write_message("error: no schema for this binary");
+      } else {
+        std::string json;
+        flatbuffers::GenerateText(parser, parser.builder_.GetBufferPointer(), opts, &json);
+        write_message((unsigned char *) json.c_str(), json.size());
+      }
     } else if(mode == 2) {
       // the data is the schema as string add null termination
       buf[message_size] = 0;
