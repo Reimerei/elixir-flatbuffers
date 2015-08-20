@@ -1,4 +1,4 @@
 FlatbuffersPort
 ==============
 
-** TODO: Add description **
+A very lightweight wrapper around the c++ implementation of flatbuffers using ports.

@@ -35,13 +35,15 @@ int write_message(unsigned char *buf, int len) {
   return res;
 }
 
+int write_message(std::string test) {
+  return write_message((unsigned char *) test.c_str(), test.size());
+}
+
 int main () {
   // we define a maximum message size, so we do not
   // have to allocate the buffer for each message
   const int max_message_size = 5 * 1024 * 1024; // 5 MB
   unsigned char buf[max_message_size];
-
-  std::string ok_response = "ok";
 
   int message_size;
 
@@ -57,23 +59,33 @@ int main () {
     parser.builder_.Clear();
     // modes: 0 => json to fb; 1 => fb to json; 2 => schema
     int mode = buf[0];
+
     if(mode == 0) {
       // the data is the json as string add null termination
       buf[message_size] = 0;
-      parser.Parse((const char *) &buf[1]);
-      write_message(parser.builder_.GetBufferPointer(), parser.builder_.GetSize());
-      write_message(buf, message_size);
+
+      if (parser.Parse((const char *) &buf[1])) {
+        write_message(parser.builder_.GetBufferPointer(), parser.builder_.GetSize());
+      } else {
+        write_message("error: could not parse json");
+      }
+
     } else if(mode == 1) {
       // the data is the binary fb, push it into the parser
       parser.builder_.PushBytes((const uint8_t *) &buf[1], message_size-1);
+
       std::string json;
       flatbuffers::GenerateText(parser, parser.builder_.GetBufferPointer(), opts, &json);
       write_message((unsigned char *) json.c_str(), json.size());
     } else if(mode == 2) {
       // the data is the schema as string add null termination
       buf[message_size] = 0;
-      parser.Parse((const char *) &buf[1]);
-      write_message((unsigned char *) ok_response.c_str(), ok_response.size());
+
+      if (parser.Parse((const char *) &buf[1])) {
+        write_message("ok");
+      } else {
+        write_message("error: could not parse schema");
+      }
     }
   }
 }

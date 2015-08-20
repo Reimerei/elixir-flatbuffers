@@ -1,0 +1,44 @@
+namespace Doge;
+
+file_identifier "doge";
+
+table TypeAmount {
+  type:string;
+  amount:int;
+}
+
+table TypeLevel {
+  type:string;
+  level:int;
+}
+
+table Request {
+  buildings:[TypeLevel];
+  quests:[string];
+  technologies:[string];
+}
+
+
+table QuestData {
+  priority:int;
+  req:Request;
+  rewards:[TypeAmount];
+  desc:string;
+  hint:string;
+  action:string;
+  type:string;
+  info:string;
+  amount:int;
+  tutorial:bool;
+}
+
+table Quest {
+  questName:string;
+  questData:QuestData;
+}
+
+table QuestRoot {
+  quests : [Quest];
+}
+
+root_type QuestRoot;
