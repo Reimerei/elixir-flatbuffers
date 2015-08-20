@@ -41,6 +41,8 @@ int main () {
   const int max_message_size = 5 * 1024 * 1024; // 5 MB
   unsigned char buf[max_message_size];
 
+  std::string ok_response = "ok";
+
   int message_size;
 
   // options for the parser
@@ -71,8 +73,7 @@ int main () {
       // the data is the schema as string add null termination
       buf[message_size] = 0;
       parser.Parse((const char *) &buf[1]);
-
-      // no reply
+      write_message((unsigned char *) ok_response.c_str(), ok_response.size());
     }
   }
 }
