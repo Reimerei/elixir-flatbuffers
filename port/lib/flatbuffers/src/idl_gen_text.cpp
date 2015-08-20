@@ -227,7 +227,7 @@ static void GenStruct(const StructDef &struct_def, const Table *table,
       text += NewLine(opts);
       text.append(indent + Indent(opts), ' ');
       OutputIdentifier(fd.name, opts, _text);
-      text += ": ";
+      text += ":";
       if (is_present) {
         switch (fd.value.type.base_type) {
            #define FLATBUFFERS_TD(ENUM, IDLTYPE, CTYPE, JTYPE, GTYPE, NTYPE, \
@@ -316,4 +316,3 @@ std::string TextMakeRule(const Parser &parser,
 }
 
 }  // namespace flatbuffers
-
