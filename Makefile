@@ -1,4 +1,4 @@
-CC = g++
+CC = clang++
 CFLAGS  = -g -Wall -std=c++11
 INCLUDES = -Iport/lib/flatbuffers/include
 
