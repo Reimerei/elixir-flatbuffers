@@ -41,7 +41,9 @@ defmodule FlatbufferPortTest do
     FlatbufferPort.load_schema(port, schema)
     assert {:response, "ok"} == collect_response
     FlatbufferPort.json_to_fb(port, json)
-    assert {:response, flatbuffer} == collect_response
+    {:response, response} = collect_response
+    assert byte_size(flatbuffer) == byte_size(response)
+    assert flatbuffer == response
   end
 
   test "return error when json cannot be parsed" do

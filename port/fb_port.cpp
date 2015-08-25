@@ -7,7 +7,15 @@
 #include <unistd.h>
 
 int read_bytes(unsigned char *buf, int len) {
-  return read(0, buf, len);
+  int i, got=0;
+
+  do {
+    if ((i = read(0, buf+got, len-got)) <= 0)
+      return(i);
+    got += i;
+  } while (got<len);
+
+  return(len);
 }
 
 int read_message(unsigned char *buf) {
@@ -19,7 +27,15 @@ int read_message(unsigned char *buf) {
 }
 
 int write_bytes(unsigned char *buf, int len) {
-  return write(1, buf, len);
+  int i, wrote = 0;
+
+  do {
+    if ((i = write(1, buf+wrote, len-wrote)) <= 0)
+      return (i);
+    wrote += i;
+  } while (wrote<len);
+
+  return (len);
 }
 
 int write_message(unsigned char *buf, int len) {
@@ -63,6 +79,8 @@ int main () {
     if(mode == 0) {
       // the data is the json as string add null termination
       buf[message_size] = 0;
+
+      fprintf(stderr, "Message Size: %i", message_size);
 
       if (parser.Parse((const char *) &buf[1])) {
         write_message(parser.builder_.GetBufferPointer(), parser.builder_.GetSize());
