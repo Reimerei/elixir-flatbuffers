@@ -80,8 +80,6 @@ int main () {
       // the data is the json as string add null termination
       buf[message_size] = 0;
 
-      fprintf(stderr, "Message Size: %i", message_size);
-
       if (parser.Parse((const char *) &buf[1])) {
         write_message(parser.builder_.GetBufferPointer(), parser.builder_.GetSize());
       } else {
