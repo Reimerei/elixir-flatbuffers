@@ -35,8 +35,8 @@ int write_message(unsigned char *buf, int len) {
   return res;
 }
 
-int write_message(std::string test) {
-  return write_message((unsigned char *) test.c_str(), test.size());
+int write_message(std::string text) {
+  return write_message((unsigned char *) text.c_str(), text.size());
 }
 
 int main () {
@@ -67,7 +67,7 @@ int main () {
       if (parser.Parse((const char *) &buf[1])) {
         write_message(parser.builder_.GetBufferPointer(), parser.builder_.GetSize());
       } else {
-        write_message("error: could not parse json");
+        write_message(parser.error_);
       }
 
     } else if(mode == 1) {

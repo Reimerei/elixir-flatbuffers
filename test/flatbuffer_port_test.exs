@@ -51,7 +51,7 @@ defmodule FlatbufferPortTest do
     FlatbufferPort.load_schema(port, schema)
     assert {:response, "ok"} == collect_response
     FlatbufferPort.json_to_fb(port, json)
-    assert {:response, "error: could not parse json"} == collect_response
+    assert {:response, "1:0: error: unknown field: questsx"} == collect_response
   end
 
   test "convert flatbuffer to json" do
