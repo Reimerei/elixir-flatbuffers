@@ -316,3 +316,4 @@ std::string TextMakeRule(const Parser &parser,
 }
 
 }  // namespace flatbuffers
+
