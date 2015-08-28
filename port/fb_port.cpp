@@ -83,7 +83,8 @@ int main () {
       if (parser.Parse((const char *) &buf[1])) {
         write_message(parser.builder_.GetBufferPointer(), parser.builder_.GetSize());
       } else {
-        write_message(parser.error_);
+        std::string error = "error: " + parser.error_;
+        write_message(error);
       }
 
     } else if(mode == 1) {
