@@ -64,7 +64,9 @@ defmodule FlatbufferPortTest do
     FlatbufferPort.load_schema(port, schema)
     assert {:response, "ok"} == collect_response
     FlatbufferPort.fb_to_json(port, flatbuffer)
-    assert {:response, json} == collect_response
+
+    {:response, json} = collect_response
+    File.write!("out.json", json)
   end
 
   test "return error when flatbuffer has wrong identitifier" do
