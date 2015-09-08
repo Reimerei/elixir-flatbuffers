@@ -16,7 +16,7 @@ defmodule FlatbufferPort.Mixfile do
   end
 
   defp deps do
-    [{:flatbuffers, [github: "reimerei/flatbuffers", branch: "master", compile: false, app: false]}]
+    [{:flatbuffers, [github: "reimerei/flatbuffers", branch: "no_spaces", compile: false, app: false]}]
   end
 end
 
