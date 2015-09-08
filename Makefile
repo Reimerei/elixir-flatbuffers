@@ -1,6 +1,10 @@
 CC = clang++
 CFLAGS  = -g -Wall -std=c++11
-FLATBUFFER_DIR = deps/flatbuffers
+ifneq ("$(wildcard deps/flatbuffers)","")
+	FLATBUFFER_DIR = deps/flatbuffers
+else
+	FLATBUFFER_DIR = ../flatbuffers
+endif
 INCLUDES = -I$(FLATBUFFER_DIR)/include
 TARGET_DIR = priv
 
