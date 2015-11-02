@@ -89,7 +89,7 @@ int main () {
 
     } else if(mode == 1) {
       // the data is the binary fb, push it into the parser
-      parser.builder_.PushBytes((const uint8_t *) &buf[1], message_size-1);
+      parser.builder_.PushFlatBuffer((const uint8_t *) &buf[1], message_size-1);
 
       // check if file identitifier matches a schema
       if(!parser.root_struct_def_ || !flatbuffers::BufferHasIdentifier(&buf[1], parser.file_identifier_.c_str())) {

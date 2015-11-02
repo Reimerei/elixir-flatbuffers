@@ -14,7 +14,7 @@ defmodule FlatbufferPortTest do
     assert is_port(port)
     assert is_list Port.info(port)
     Port.close(port)
-    assert :undefined == Port.info(port)
+    assert nil == Port.info(port)
   end
 
   test "add a schema" do
@@ -66,7 +66,6 @@ defmodule FlatbufferPortTest do
     FlatbufferPort.fb_to_json(port, flatbuffer)
 
     {:response, json} = collect_response
-    File.write!("out.json", json)
   end
 
   test "return error when flatbuffer has wrong identitifier" do
