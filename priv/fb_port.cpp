@@ -63,12 +63,9 @@ int main () {
 
   int message_size;
 
-  // options for the parser
-  flatbuffers::GeneratorOptions opts = flatbuffers::GeneratorOptions();
-  opts.strict_json = true;
-  opts.indent_step = -1;
-
   flatbuffers::Parser parser;
+  parser.opts.strict_json = true;
+  parser.opts.indent_step = -1;
 
   // loop until stdin is closed
   while((message_size = read_message(buf)) > 0 && message_size <= max_message_size) {
@@ -96,7 +93,7 @@ int main () {
         write_message("error: no schema for this binary");
       } else {
         std::string json;
-        flatbuffers::GenerateText(parser, parser.builder_.GetBufferPointer(), opts, &json);
+        flatbuffers::GenerateText(parser, parser.builder_.GetBufferPointer(), &json);
         write_message((unsigned char *) json.c_str(), json.size());
       }
     } else if(mode == 2) {

@@ -34,11 +34,11 @@ defmodule FlatbufferTest do
     """
     port = FlatbufferPort.open_port()
     FlatbufferPort.load_schema(port, schema)
-    assert {:response, "ok"} == collect_response
-    FlatbufferPort.json_to_fb(port, json)
-    {:response, fb} = collect_response
-    FlatbufferPort.fb_to_json(port, fb)
-    {:response, json_looped} = collect_response
+    assert {:response, "ok"} == collect_response()
+    assert true = FlatbufferPort.json_to_fb(port, json)
+    {:response, fb} = collect_response()
+    assert true = FlatbufferPort.fb_to_json(port, fb)
+    {:response, json_looped} = collect_response()
     assert Poison.decode(json) == Poison.decode(json_looped)
   end
 
@@ -54,35 +54,13 @@ defmodule FlatbufferTest do
     """
     port = FlatbufferPort.open_port()
     FlatbufferPort.load_schema(port, schema)
-    assert {:response, "ok"} == collect_response
+    assert {:response, "ok"} == collect_response()
     FlatbufferPort.json_to_fb(port, json)
-    {:response, fb} = collect_response
+    {:response, fb} = collect_response()
     FlatbufferPort.fb_to_json(port, fb)
-    {:response, json_looped} = collect_response
+    {:response, json_looped} = collect_response()
     assert Poison.decode(json) == Poison.decode(json_looped)
   end
-
-  # test "discard extra values in the json", %{schema: schema} do
-  #   json =
-  #   """
-  #     {
-  #       "a" : true,
-  #       "b" : 1.1234,
-  #       "c" : 123,
-  #       "d" : "a_test_string",
-  #       "e" : "should_be_ignored"
-  #     }
-  #   """
-  #   port = FlatbufferPort.open_port()
-  #   FlatbufferPort.load_schema(port, schema)
-  #   assert {:response, "ok"} == collect_response
-  #   FlatbufferPort.json_to_fb(port, json)
-  #   {:response, fb} = collect_response
-  #   FlatbufferPort.fb_to_json(port, fb)
-  #   {:response, json_looped} = collect_response
-  #   assert Poison.decode(json) == Poison.decode(json_looped)
-  # end
-
 
   def collect_response() do
     receive do
@@ -91,7 +69,4 @@ defmodule FlatbufferTest do
       3000 -> :timeout
     end
   end
-
-
-
 end

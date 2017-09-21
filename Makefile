@@ -16,8 +16,11 @@ $(TARGET_DIR)/idl_parser.o: $(FLATBUFFER_DIR)/src/idl_parser.cpp
 $(TARGET_DIR)/idl_gen_text.o: $(FLATBUFFER_DIR)/src/idl_gen_text.cpp
 	$(CC) $(CFLAGS) $(INCLUDES) -c -o $(TARGET_DIR)/idl_gen_text.o $(FLATBUFFER_DIR)/src/idl_gen_text.cpp
 
-$(TARGET_DIR)/fb_port: $(TARGET_DIR)/idl_gen_text.o $(TARGET_DIR)/idl_parser.o $(TARGET_DIR)/fb_port.cpp
-	$(CC) $(CFLAGS) $(INCLUDES) -o $(TARGET_DIR)/fb_port $(TARGET_DIR)/idl_gen_text.o $(TARGET_DIR)/idl_parser.o $(TARGET_DIR)/fb_port.cpp
+$(TARGET_DIR)/util.o: $(FLATBUFFER_DIR)/src/util.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -c -o $(TARGET_DIR)/util.o $(FLATBUFFER_DIR)/src/util.cpp
+
+$(TARGET_DIR)/fb_port: $(TARGET_DIR)/idl_gen_text.o $(TARGET_DIR)/idl_parser.o $(TARGET_DIR)/util.o $(TARGET_DIR)/fb_port.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(TARGET_DIR)/fb_port $(TARGET_DIR)/idl_gen_text.o $(TARGET_DIR)/idl_parser.o $(TARGET_DIR)/util.o $(TARGET_DIR)/fb_port.cpp
 
 clean:
 	$(RM) $(TARGET_DIR)/*.o
