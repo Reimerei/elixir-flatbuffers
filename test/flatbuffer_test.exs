@@ -39,7 +39,7 @@ defmodule FlatbufferTest do
     {:response, fb} = collect_response()
     assert true = FlatbufferPort.fb_to_json(port, fb)
     {:response, json_looped} = collect_response()
-    assert Poison.decode(json) == Poison.decode(json_looped)
+    assert Jason.decode(json) == Jason.decode(json_looped)
   end
 
   test "order of values in the json should not matter", %{schema: schema} do
@@ -59,7 +59,7 @@ defmodule FlatbufferTest do
     {:response, fb} = collect_response()
     FlatbufferPort.fb_to_json(port, fb)
     {:response, json_looped} = collect_response()
-    assert Poison.decode(json) == Poison.decode(json_looped)
+    assert Jason.decode(json) == Jason.decode(json_looped)
   end
 
   def collect_response() do

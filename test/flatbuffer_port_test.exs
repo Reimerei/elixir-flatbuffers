@@ -53,7 +53,7 @@ defmodule FlatbufferPortTest do
     FlatbufferPort.load_schema(port, schema)
     assert {:response, "ok"} == collect_response()
     FlatbufferPort.json_to_fb(port, json)
-    assert {:response, "error: 1:0: error: unknown field: questsx"} == collect_response()
+    assert {:response, "error: 1: 12: error: unknown field: questsx"} == collect_response()
   end
 
   test "convert flatbuffer to json" do
@@ -65,7 +65,7 @@ defmodule FlatbufferPortTest do
     assert {:response, "ok"} == collect_response()
     FlatbufferPort.fb_to_json(port, flatbuffer)
     {:response, converted_json} = collect_response()
-    assert Poison.decode!(json) == Poison.decode!(converted_json)
+    assert Jason.decode!(json) == Jason.decode!(converted_json)
   end
 
   test "return error when flatbuffer has wrong identitifier" do
