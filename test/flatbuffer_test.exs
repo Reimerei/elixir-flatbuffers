@@ -4,9 +4,7 @@ defmodule FlatbufferTest do
   # These are some basic tests for the behaviour of the flatbuffer library, so we know for sure how it behaves.
 
   setup do
-
-    schema =
-    """
+    schema = """
       file_identifier "test";
 
       table Foo {
@@ -23,8 +21,7 @@ defmodule FlatbufferTest do
   end
 
   test "serialize and deserialize all scalars properly", %{schema: schema} do
-    json =
-    """
+    json = """
       {
         "a" : true,
         "b" : 1.1234,
@@ -32,6 +29,7 @@ defmodule FlatbufferTest do
         "d" : "a_test_string"
       }
     """
+
     port = FlatbufferPort.open_port()
     FlatbufferPort.load_schema(port, schema)
     assert {:response, "ok"} == collect_response()
@@ -43,8 +41,7 @@ defmodule FlatbufferTest do
   end
 
   test "order of values in the json should not matter", %{schema: schema} do
-    json =
-    """
+    json = """
       {
         "b" : 1.1234,
         "d" : "a_test_string",
@@ -52,6 +49,7 @@ defmodule FlatbufferTest do
         "a" : true
       }
     """
+
     port = FlatbufferPort.open_port()
     FlatbufferPort.load_schema(port, schema)
     assert {:response, "ok"} == collect_response()
@@ -64,7 +62,7 @@ defmodule FlatbufferTest do
 
   def collect_response() do
     receive do
-        {_port, {:data, data}}  ->  {:response, data}
+      {_port, {:data, data}} -> {:response, data}
     after
       3000 -> :timeout
     end

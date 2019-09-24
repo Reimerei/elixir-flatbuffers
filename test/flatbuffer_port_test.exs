@@ -3,7 +3,7 @@ defmodule FlatbufferPortTest do
 
   def collect_response() do
     receive do
-      {_port, {:data, data}}  ->  {:response, data}
+      {_port, {:data, data}} -> {:response, data}
     after
       3000 -> :timeout
     end
@@ -12,7 +12,7 @@ defmodule FlatbufferPortTest do
   test "start a port" do
     port = FlatbufferPort.open_port()
     assert is_port(port)
-    assert is_list Port.info(port)
+    assert is_list(Port.info(port))
     Port.close(port)
     assert nil == Port.info(port)
   end
@@ -79,9 +79,8 @@ defmodule FlatbufferPortTest do
   end
 
   test "parse responses" do
-   assert {:ok, "some_data"} == FlatbufferPort.parse_reponse("some_data")
-   assert :ok == FlatbufferPort.parse_reponse("ok")
-   assert {:error, "some_reason"} == FlatbufferPort.parse_reponse("error: some_reason")
- end
-
+    assert {:ok, "some_data"} == FlatbufferPort.parse_reponse("some_data")
+    assert :ok == FlatbufferPort.parse_reponse("ok")
+    assert {:error, "some_reason"} == FlatbufferPort.parse_reponse("error: some_reason")
+  end
 end
