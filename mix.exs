@@ -19,7 +19,7 @@ defmodule FlatbufferPort.Mixfile do
 
   defp deps do
     [
-      {:flatbuffers, [github: "google/flatbuffers", tag: "v1.11.0", compile: false, app: false]},
+      {:flatbuffers, [github: "google/flatbuffers", tag: "v1.12.0", compile: false, app: false]},
       {:jason, "~> 1.1.2", [only: :test]}
     ]
   end
