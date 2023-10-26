@@ -110,7 +110,7 @@ int main()
       else
       {
         std::string json;
-        flatbuffers::GenerateText(parser, parser.builder_.GetBufferPointer(), &json);
+        flatbuffers::GenText(parser, parser.builder_.GetBufferPointer(), &json);
         write_message((unsigned char *)json.c_str(), json.size());
       }
     }
